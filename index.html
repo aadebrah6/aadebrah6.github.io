@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Augustine Atta Debrah — Analytical Chemist</title>
+<meta name="description" content="Analytical chemist. Method development, instrumentation, separations and mass spectrometry. Ph.D. candidate at Georgia Institute of Technology.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0E1620;
+  --paper:#E8EDF0;
+  --surface:#FFFFFF;
+  --navy:#1F3864;
+  --signal:#0E8F92;
+  --muted:#5C6B7A;
+  --rule:#C9D4DC;
+  --maxw:960px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,sans-serif;
+  font-size:16.5px;line-height:1.62;-webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+a{color:var(--navy);text-decoration:none;border-bottom:1px solid var(--rule)}
+a:hover{color:var(--signal);border-color:var(--signal)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--signal);outline-offset:3px}
+
+/* ---------- nav ---------- */
+nav{
+  position:sticky;top:0;z-index:20;background:rgba(232,237,240,.92);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--rule);
+}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:58px}
+.mark{font-family:"IBM Plex Mono",monospace;font-size:12.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--navy);border:0}
+.navlinks{display:flex;gap:22px;flex-wrap:wrap}
+.navlinks a{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);border:0}
+.navlinks a:hover{color:var(--signal)}
+
+/* ---------- hero ---------- */
+header{padding:76px 0 34px}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--signal);margin:0 0 18px}
+h1{
+  font-family:"Instrument Serif",Georgia,serif;font-weight:400;
+  font-size:clamp(46px,8vw,86px);line-height:.98;letter-spacing:-.015em;
+  margin:0 0 20px;color:var(--ink);
+}
+.tagline{font-size:clamp(17px,2.2vw,20px);color:var(--muted);max-width:38em;margin:0 0 30px}
+.tagline em{font-family:"Instrument Serif",Georgia,serif;font-style:italic;
+  color:var(--ink);font-size:1.12em}
+
+/* ---------- chromatogram signature ---------- */
+.trace{margin:22px 0 10px;position:relative}
+.trace svg{display:block;width:100%;height:auto}
+.baseline,.peaks{fill:none;stroke-linecap:round;stroke-linejoin:round}
+.baseline{stroke:var(--rule);stroke-width:1}
+.peaks{stroke:var(--navy);stroke-width:1.6}
+.peaks.draw{stroke-dasharray:2600;stroke-dashoffset:2600;animation:run 2.6s .25s cubic-bezier(.4,0,.2,1) forwards}
+@keyframes run{to{stroke-dashoffset:0}}
+.tick{stroke:var(--rule);stroke-width:1}
+.plabel{font-family:"IBM Plex Mono",monospace;font-size:9.4px;letter-spacing:.07em;
+  fill:var(--muted);text-anchor:middle}
+.axis{font-family:"IBM Plex Mono",monospace;font-size:8.6px;letter-spacing:.13em;
+  fill:var(--muted);text-transform:uppercase}
+.caption{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--muted);
+  letter-spacing:.04em;margin:2px 0 0}
+
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{
+  display:inline-block;padding:11px 20px;border:1px solid var(--navy);
+  font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--navy);background:transparent;transition:.18s;
+}
+.btn:hover{background:var(--navy);color:var(--paper);border-color:var(--navy)}
+.btn.solid{background:var(--navy);color:var(--paper)}
+.btn.solid:hover{background:var(--signal);border-color:var(--signal)}
+
+/* ---------- sections ---------- */
+section{padding:52px 0;border-top:1px solid var(--rule)}
+.slabel{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--signal);margin:0 0 22px}
+h2{font-family:"Instrument Serif",Georgia,serif;font-weight:400;
+  font-size:clamp(30px,4.4vw,42px);line-height:1.08;margin:0 0 22px;letter-spacing:-.01em}
+h3{font-size:17px;font-weight:600;margin:0 0 3px}
+p{margin:0 0 16px;max-width:60em}
+
+/* skills */
+.skill{border-top:1px solid var(--rule);padding:15px 0;display:grid;
+  grid-template-columns:200px 1fr;gap:22px}
+.skill:first-of-type{border-top:0}
+.skill dt{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--navy);padding-top:3px}
+.skill dd{margin:0;color:var(--ink)}
+dl{margin:0}
+
+/* experience */
+.job{display:grid;grid-template-columns:132px 1fr;gap:24px;padding:24px 0;
+  border-top:1px solid var(--rule)}
+.job:first-of-type{border-top:0;padding-top:4px}
+.when{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--muted);
+  letter-spacing:.04em;padding-top:4px}
+.org{color:var(--muted);font-size:15px;margin:0 0 10px}
+.job ul{margin:0;padding-left:18px}
+.job li{margin-bottom:7px}
+
+/* publications */
+.pub{padding:16px 0;border-top:1px solid var(--rule);display:grid;
+  grid-template-columns:44px 1fr;gap:18px}
+.pub:first-of-type{border-top:0}
+.pnum{font-family:"IBM Plex Mono",monospace;font-size:11.5px;color:var(--signal);padding-top:4px}
+.pub p{margin:0;font-size:15.4px;line-height:1.55}
+.venue{font-family:"Instrument Serif",Georgia,serif;font-style:italic;font-size:1.09em}
+.me{font-weight:600;color:var(--navy)}
+
+/* two-col lists */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+.stack p{margin-bottom:9px;font-size:15.4px}
+.stack strong{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--navy);display:block;margin-bottom:3px;font-weight:500}
+
+footer{padding:46px 0 60px;border-top:1px solid var(--rule)}
+.contact{display:flex;gap:26px;flex-wrap:wrap;font-family:"IBM Plex Mono",monospace;font-size:13px}
+.fine{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--muted);margin-top:26px;letter-spacing:.03em}
+
+@media(max-width:720px){
+  .skill{grid-template-columns:1fr;gap:6px}
+  .job{grid-template-columns:1fr;gap:6px}
+  .pub{grid-template-columns:28px 1fr;gap:12px}
+  .grid2{grid-template-columns:1fr;gap:26px}
+  .navlinks{display:none}
+  header{padding:48px 0 24px}
+}
+@media(prefers-reduced-motion:reduce){
+  .peaks.draw{animation:none;stroke-dashoffset:0}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="mark" href="#top">A. A. Debrah</a>
+    <div class="navlinks">
+      <a href="#skills">Techniques</a>
+      <a href="#experience">Experience</a>
+      <a href="#publications">Publications</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header id="top">
+  <div class="wrap">
+    <p class="eyebrow">Analytical Chemist &middot; Atlanta, Georgia</p>
+    <h1>Augustine<br>Atta Debrah</h1>
+    <p class="tagline">I develop analytical methods and <em>build the instruments that run them</em> — across chromatography, mass spectrometry, and spectroscopy.</p>
+
+    <div class="trace" aria-hidden="true">
+      <svg viewBox="0 0 960 190" role="img">
+        <!-- baseline -->
+        <line class="baseline" x1="0" y1="158" x2="960" y2="158"/>
+        <!-- ticks -->
+        <line class="tick" x1="120" y1="158" x2="120" y2="164"/>
+        <line class="tick" x1="270" y1="158" x2="270" y2="164"/>
+        <line class="tick" x1="420" y1="158" x2="420" y2="164"/>
+        <line class="tick" x1="570" y1="158" x2="570" y2="164"/>
+        <line class="tick" x1="720" y1="158" x2="720" y2="164"/>
+        <line class="tick" x1="870" y1="158" x2="870" y2="164"/>
+        <!-- trace -->
+        <path class="peaks draw" d="M0,158 L84,157 C100,157 108,150 120,58 C132,150 140,157 156,157
+          L236,156 C252,156 260,150 270,96 C280,150 288,156 304,156
+          L386,157 C402,157 410,148 420,38 C430,148 438,157 454,157
+          L536,156 C552,156 560,150 570,84 C580,150 588,156 604,156
+          L686,157 C702,157 710,150 720,66 C730,150 738,157 754,157
+          L836,157 C852,157 860,152 870,110 C880,152 888,157 904,157 L960,157"/>
+        <!-- peak labels -->
+        <text class="plabel" x="120" y="48">GC / GC-MS</text>
+        <text class="plabel" x="270" y="86">CE-LIF</text>
+        <text class="plabel" x="420" y="28">UPLC-QTOF-MS</text>
+        <text class="plabel" x="570" y="74">RAMAN / FTIR</text>
+        <text class="plabel" x="720" y="56">MICROFLUIDICS</text>
+        <text class="plabel" x="870" y="100">PYTHON</text>
+        <text class="axis" x="0" y="182">Retention</text>
+        <text class="axis" x="905" y="182">2026</text>
+      </svg>
+      <p class="caption">Eleven peer-reviewed publications &middot; Ph.D. candidate, Georgia Tech</p>
+    </div>
+
+    <div class="actions">
+      <a class="btn solid" href="resume.pdf" download>Download résumé (PDF)</a>
+      <a class="btn" href="mailto:adebrah6@gatech.edu">Get in touch</a>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <p class="slabel">Profile</p>
+    <h2>Methods, instruments, and the data they produce</h2>
+    <p>I am completing a Ph.D. in analytical chemistry at the Georgia Institute of Technology, where I designed and built an aqueous-in-gas microfluidic droplet system from concept through commissioning — learning fabrication, fluid dynamics, and high-speed imaging analysis along the way.</p>
+    <p>Before that I trained as a laboratory technologist in Ghana, building electronic instrumentation and running teaching laboratories. My published work spans method development for pharmaceutical extractables, high-throughput lipid analysis by supercritical fluid chromatography, and non-targeted screening of food-contact materials.</p>
+    <p>I am looking for analytical development, R&amp;D, applications, or process development roles in analytical instrumentation, pharmaceuticals, biotechnology, chemical manufacturing, or advanced materials.</p>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <p class="slabel">Techniques &amp; tools</p>
+    <h2>What I can run on day one</h2>
+    <dl>
+      <div class="skill"><dt>Separations &amp; MS</dt><dd>HPLC / UPLC, GC-FID/ECD, GC-MS, UPLC-QTOF-MS, UPLC-MS/MS, ion mobility-MS, supercritical fluid chromatography, HILIC, CE-LIF, SPME, flow injection analysis</dd></div>
+      <div class="skill"><dt>Spectroscopy</dt><dd>Raman, FTIR, UV-Vis, LIBS, atomic absorption</dd></div>
+      <div class="skill"><dt>Wet chemistry</dt><dd>Redox titrimetry, acid digestion, spectrophotometric determination, standard and calibrant preparation</dd></div>
+      <div class="skill"><dt>Methods &amp; quality</dt><dd>Method development and validation, calibration, sample preparation and extraction, quantitative and non-targeted analysis, chemometrics, process monitoring and optimization, SOP authoring, QC documentation</dd></div>
+      <div class="skill"><dt>Data &amp; software</dt><dd>Python (data pipelines, image analysis), JMP (design of experiments, statistical modeling), MZmine, MaxQuant, ChemDraw, Multisim, BioRender</dd></div>
+      <div class="skill"><dt>Systems</dt><dd>Microfluidic device design and fabrication, instrument prototyping and troubleshooting, preventive maintenance and calibration schedules, analog and digital electronics</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <p class="slabel">Experience</p>
+    <h2>Where the work happened</h2>
+
+    <div class="job">
+      <div class="when">2022 — present</div>
+      <div>
+        <h3>Graduate Research Assistant</h3>
+        <p class="org">Stockton Laboratory, Georgia Institute of Technology</p>
+        <ul>
+          <li>Designed, built, and validated an aqueous-in-gas microfluidic droplet system from concept through commissioning and performance qualification; established stability regimes and characterized flow-rate-dependent size distributions and operating transitions.</li>
+          <li>Developed CE-LIF methods for quantifying fluorescently labeled amino acids, establishing concentration stability, precision, and analyte recovery across droplet formation and collection.</li>
+          <li>Built Python data and image-analysis pipelines for high-speed droplet imaging, replacing manual measurement and accelerating design iteration.</li>
+          <li>Conduct spectroscopic and optical characterization of droplet systems; author protocols and diagnose device failures. Funded by Scialog, Research Corporation for Science Advancement.</li>
+          <li>Mentor four undergraduate researchers on instrument development, experimental design, data analysis, and laboratory safety.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="when">2022 — present</div>
+      <div>
+        <h3>Graduate Teaching Assistant, Analytical Instrumentation</h3>
+        <p class="org">Georgia Institute of Technology</p>
+        <ul>
+          <li>Operate and instruct on GC, GC-MS, LC, Raman, FTIR, UV-Vis, LIBS, and flow injection analysis; trained 100+ students in sample preparation, method development, calibration, and data interpretation.</li>
+          <li>Author and revise standard operating procedures for consistent, traceable laboratory practice; provide real-time instrument and method troubleshooting.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="when">2025 — present</div>
+      <div>
+        <h3>Founder &amp; Program Lead, Analytical Instrumentation Training Program</h3>
+        <p class="org">Georgia Institute of Technology</p>
+        <ul>
+          <li>Designed curriculum and training modules for a departmental program addressing hands-on instrumentation gaps among graduate students.</li>
+          <li>Deliver hands-on training on AAS, GC, GC-MS, LC, Raman, FTIR, and UV-Vis, emphasizing data processing and instrument quality control.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="when">2018 — 2022</div>
+      <div>
+        <h3>Laboratory Technologist &amp; Research Assistant</h3>
+        <p class="org">University of Cape Coast, Ghana</p>
+        <ul>
+          <li>Designed and tested custom circuit systems and laboratory instrumentation; implemented preventive maintenance and calibration schedules sustaining instrument uptime and safety.</li>
+          <li>Instructor of record for instrumentation and electronics laboratories, 100+ students per year; supervised undergraduate research in electronics, microbiology, and food science.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="when">2015</div>
+      <div>
+        <h3>Laboratory Assistant (Intern)</h3>
+        <p class="org">Ghana Manganese Company Ltd.</p>
+        <ul>
+          <li>Determined manganese by redox titrimetry following acid digestion, and boron by spectrophotometry in water and environmental samples; prepared ore samples and standard solutions.</li>
+          <li>Documented analytical results and supported quality control across the assay and environmental laboratories.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="publications">
+  <div class="wrap">
+    <p class="slabel">Publications &middot; 11 peer-reviewed</p>
+    <h2>Published work</h2>
+
+    <div class="pub"><div class="pnum">01</div><div><p>Hou, H., Yang, S., Yang, X., Sun, W., <span class="me">Debrah, A. A.</span>, Javeria, H., Tian, D., &amp; Du, Z. (2025). Comprehensive profiling and development of a collision cross-section database for milk oligosaccharides via orthogonal UPLC–cyclic ion mobility–mass spectrometry. <span class="venue">Food Chemistry</span>, 480, 143839. <a href="https://doi.org/10.1016/j.foodchem.2025.143839">DOI</a></p></div></div>
+
+    <div class="pub"><div class="pnum">02</div><div><p>Hou, H., Wang, M., Yang, S., Yang, X., Sun, W., Sun, X., Guo, Q., <span class="me">Debrah, A. A.</span>, &amp; Du, Z. (2024). Evaluation of prebiotic glycan composition in human milk and infant formula: galacto-oligosaccharide profile and absolute quantification of major milk oligosaccharides by UPLC–cyclic IM-MS and UPLC-MS/MS. <span class="venue">Journal of Agricultural and Food Chemistry</span>, 72(14), 7980–7990. <a href="https://doi.org/10.1021/acs.jafc.4c00810">DOI</a></p></div></div>
+
+    <div class="pub"><div class="pnum">03</div><div><p>Hou, H., Wu, Q., Li, Z., Wang, D., <span class="me">Debrah, A. A.</span>, Zou, J., &amp; Du, Z. (2023). A non-invasive and rapid method for discrimination of inkjet printouts by ion mobility spectrometry combined with chemometrics. <span class="venue">Microchemical Journal</span>, 194, 109250. <a href="https://doi.org/10.1016/j.microc.2023.109250">DOI</a></p></div></div>
+
+    <div class="pub"><div class="pnum">04</div><div><p>Hou, H., Tang, Y., Zhao, J., <span class="me">Debrah, A. A.</span>, Shen, Z., Li, C., &amp; Du, Z. (2023). Authentication of organically produced cow milk by fatty acid profile combined with chemometrics: a case study in China. <span class="venue">Journal of Food Composition and Analysis</span>, 120, 105297. <a href="https://doi.org/10.1016/j.jfca.2023.105297">DOI</a></p></div></div>
+
+    <div class="pub"><div class="pnum">05</div><div><p>Wang, M., Zhang, F., <span class="me">Debrah, A. A.</span>, Khan, J., Hou, H., Yuan, Q., &amp; Du, Z. (2023). Selective extraction of phospholipids from human milk using glass fabric modified with a zirconium-based metal–organic framework. <span class="venue">Journal of Chromatography A</span>, 1710, 464435. <a href="https://doi.org/10.1016/j.chroma.2023.464435">DOI</a></p></div></div>
+
+    <div class="pub"><div class="pnum">06</div><div><p>Wang, M., Zhang, F., Tang, Y., Ali, M. M., Shen, Z., <span class="me">Debrah, A. A.</span>, Yuan, Q., &amp; Du, Z. (2022). Boron-doped titania for separation and purification of lactoferrin in dairy products. <span class="venue">Journal of Chromatography B</span>, 1212, 123501. <a href="https://doi.org/10.1016/j.jchromb.2022.123501">DOI</a></p></div></div>
+
+    <div class="pub"><div class="pnum">07</div><div><p>Sun, X., Zheng, X., Tang, Y., <span class="me">Debrah, A. A.</span>, &amp; Du, Z. (2021). Supercritical fluid extraction combined with UPLC–QTOF-MS for determination of extractables to evaluate compatibility of drugs with rubber closures. <span class="venue">AAPS PharmSciTech</span>, 22, 1–9. <a href="https://doi.org/10.1208/s12249-020-01907-6">DOI</a></p></div></div>
+
+    <div class="pub"><div class="pnum">08</div><div><p>Tang, Y., Ali, M. M., Sun, X., <span class="me">Debrah, A. A.</span>, Wang, M., Hou, H., Guo, Q., &amp; Du, Z. (2021). Development of a high-throughput method for comprehensive lipid analysis in milk using ultra-high performance supercritical fluid chromatography with QTOF-MS. <span class="venue">Journal of Chromatography A</span>, 1658, 462606. <a href="https://doi.org/10.1016/j.chroma.2021.462606">DOI</a></p></div></div>
+
+    <div class="pub"><div class="pnum">09</div><div><p>Tang, Y., Sun, X., Hou, H., <span class="me">Debrah, A. A.</span>, Wang, M., Zhang, F., &amp; Du, Z. (2021). Investigation of alterations in phospholipids during the production chain of infant formulas via HILIC–QTOF-MS and multivariate data analysis. <span class="venue">Food Chemistry</span>, 364, 130414. <a href="https://doi.org/10.1016/j.foodchem.2021.130414">DOI</a></p></div></div>
+
+    <div class="pub"><div class="pnum">10</div><div><p>Ma, X., Sui, H., Sun, X., Ali, M. M., <span class="me">Debrah, A. A.</span>, &amp; Du, Z. (2021). A risk classification strategy for migrants of food contact material combined with three in silico (Q)SAR tools. <span class="venue">Journal of Hazardous Materials</span>, 419, 126422. <a href="https://doi.org/10.1016/j.jhazmat.2021.126422">DOI</a></p></div></div>
+
+    <div class="pub"><div class="pnum">11</div><div><p>Hu, Y., Du, Z., Sun, X., Ma, X., Song, J., Sui, H., &amp; <span class="me">Debrah, A. A.</span> (2021). Non-targeted analysis and risk assessment of non-volatile compounds in polyamide food contact materials. <span class="venue">Food Chemistry</span>, 345, 128625. <a href="https://doi.org/10.1016/j.foodchem.2020.128625">DOI</a></p></div></div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <p class="slabel">Education, awards &amp; service</p>
+    <h2>Background</h2>
+    <div class="grid2">
+      <div class="stack">
+        <p><strong>Education</strong></p>
+        <p><b>Ph.D., Analytical Chemistry</b> — Georgia Institute of Technology, expected 2027. Advisor: Prof. Amanda Stockton.</p>
+        <p><b>Certificate in Technology Innovation</b> (TI:GER) — Scheller College of Business, Georgia Tech, expected Dec 2026.</p>
+        <p><b>M.S., Chemistry</b> — Georgia Institute of Technology, 2025.</p>
+        <p><b>B.Sc., Laboratory Technology</b> — University of Cape Coast, Ghana, 2016.</p>
+      </div>
+      <div class="stack">
+        <p><strong>Awards</strong></p>
+        <p>White &amp; Gold Student Leadership Award, Georgia Tech (2024) · AbGradCon Conference Award (2025) · College of Sciences Travel Grant (2026) · Graduate Teaching Assistantship, competitive full doctoral funding (2022–present).</p>
+        <p><strong>Conferences</strong></p>
+        <p>Pittcon 2025 · ACS Spring 2026 · ASME Fluids Engineering Division Summer Meeting 2025 (oral) · AbGradCon 2025 · ExxonMobil-PALS 2026.</p>
+        <p><strong>Memberships</strong></p>
+        <p>American Chemical Society · AOAC International · Society for Laboratory Automation and Screening · Society of Environmental Toxicology and Chemistry.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <p class="slabel">Contact</p>
+    <h2>Open to new roles</h2>
+    <p>Analytical development, R&amp;D, applications, instrumentation, and process development positions. Based in Atlanta, Georgia; open to relocation.</p>
+    <div class="contact">
+      <a href="mailto:adebrah6@gatech.edu">adebrah6@gatech.edu</a>
+      <a href="tel:+14708381668">(470) 838-1668</a>
+      <a href="https://www.linkedin.com/in/aad27/">LinkedIn</a>
+      <a href="https://scholar.google.com/citations?user=gUtnRHEAAAAJ&amp;hl=en">Google Scholar</a>
+      <a href="resume.pdf" download>Résumé (PDF)</a>
+    </div>
+    <p class="fine">Last updated August 2026</p>
+  </div>
+</footer>
+
+<script>
+  // Draw the chromatogram once the fonts and layout settle.
+  window.addEventListener('load', function () {
+    var p = document.querySelector('.peaks');
+    if (p) { p.classList.add('draw'); }
+  });
+</script>
+</body>
+</html>

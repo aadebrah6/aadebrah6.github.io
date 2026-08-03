@@ -123,6 +123,9 @@ dl{margin:0}
 /* two-col lists */
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:34px}
 .stack p{margin-bottom:9px;font-size:15.4px}
+.lede{font-size:clamp(18px,2.4vw,21px);line-height:1.5;color:var(--ink);max-width:34em;
+  margin-bottom:24px}
+.lede::first-line{font-weight:500}
 .stack strong{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.1em;
   text-transform:uppercase;color:var(--navy);display:block;margin-bottom:3px;font-weight:500}
 
@@ -150,9 +153,12 @@ footer{padding:46px 0 60px;border-top:1px solid var(--rule)}
   <div class="wrap">
     <a class="mark" href="#top">A. A. Debrah</a>
     <div class="navlinks">
+      <a href="#about">About</a>
       <a href="#skills">Techniques</a>
       <a href="#experience">Experience</a>
       <a href="#publications">Publications</a>
+      <a href="#mentorship">Mentorship</a>
+      <a href="#talks">Talks</a>
       <a href="#education">Education</a>
       <a href="#contact">Contact</a>
     </div>
@@ -197,7 +203,8 @@ footer{padding:46px 0 60px;border-top:1px solid var(--rule)}
     </div>
 
     <div class="actions">
-      <a class="btn solid" href="resume.pdf" download>Download résumé (PDF)</a>
+      <a class="btn solid" href="cv.pdf" download>Full CV (PDF)</a>
+      <a class="btn" href="resume.pdf" download>One-page résumé</a>
       <a class="btn" href="mailto:adebrah6@gatech.edu">Get in touch</a>
     </div>
   </div>
@@ -205,11 +212,20 @@ footer{padding:46px 0 60px;border-top:1px solid var(--rule)}
 
 <section id="about">
   <div class="wrap">
-    <p class="slabel">Profile</p>
-    <h2>Methods, instruments, and the data they produce</h2>
-    <p>I am completing a Ph.D. in analytical chemistry at the Georgia Institute of Technology, where I designed and built an aqueous-in-gas microfluidic droplet system from concept through commissioning — learning fabrication, fluid dynamics, and high-speed imaging analysis along the way.</p>
-    <p>Before that I trained as a laboratory technologist in Ghana, building electronic instrumentation and running teaching laboratories. My published work spans method development for pharmaceutical extractables, high-throughput lipid analysis by supercritical fluid chromatography, and non-targeted screening of food-contact materials.</p>
-    <p>I am looking for analytical development, R&amp;D, applications, or process development roles in analytical instrumentation, pharmaceuticals, biotechnology, chemical manufacturing, or advanced materials.</p>
+    <p class="slabel">About</p>
+    <h2>Most of what I can do, I learned by taking on work I wasn&rsquo;t yet qualified for</h2>
+
+    <p class="lede">I build analytical methods and the instruments that run them. What I care about is the moment a measurement becomes trustworthy &mdash; when a number stops being a reading and starts being evidence somebody can act on.</p>
+
+    <p>I began as a laboratory technologist in Ghana, building electronic instrumentation and running teaching laboratories at the University of Cape Coast. That work was hands-on and unglamorous: calibration schedules, preventive maintenance, circuit boards that had to be designed because no one was going to buy us one. It taught me that instruments are not black boxes. Somebody built them, and somebody has to understand them well enough to know when they are lying to you.</p>
+
+    <p>Analytical chemistry pulled me in from there. My published work came out of multi-institution collaborations across chromatography and mass spectrometry &mdash; determining extractables from rubber closures to assess drug&ndash;container compatibility, developing high-throughput lipid analysis by supercritical fluid chromatography, screening food-contact materials for compounds nobody had thought to look for. Eleven papers, and in every one of them my contribution was a component of something larger that other people were leading.</p>
+
+    <p>Then I moved to Georgia Tech, to a different country and a different scientific culture, and was handed a problem with no established solution: build a microfluidic system that generates aqueous droplets in a gas phase, under heat, stably enough to do chemistry inside them. No template existed. I learned fluid dynamics, fabrication, and high-speed imaging analysis largely from scratch, and taught myself Python to make sense of the data the system produced. The first several designs failed. That stretch was uncomfortable in a way coursework never is, and it is the single most useful thing that has happened to my training &mdash; it is where I learned to diagnose an unfamiliar system and stay with a problem until it gives.</p>
+
+    <p>Alongside the research I founded the Analytical Instrumentation Training Program in my department, after noticing that graduate students were leaving with theoretical knowledge and thin hands-on instrument experience. Building it meant persuading faculty, designing curriculum around a real gap, and changing the program repeatedly as we found out what actually worked. I have also authored and revised standard operating procedures and carried responsibility for safety in teaching labs running more than a hundred students a year. Documentation and safety are not overhead to me. They are what make a result defensible and a laboratory a place people can depend on.</p>
+
+    <p>I am now looking for work in industry &mdash; analytical development, R&amp;D, applications, instrumentation, or process development. I am not looking to carry my own research agenda into a company. I want to point what I can do at problems a team is already working on, and I am comfortable being the newest person in the room while I learn how they do it.</p>
   </div>
 </section>
 
@@ -219,7 +235,7 @@ footer{padding:46px 0 60px;border-top:1px solid var(--rule)}
     <h2>What I can run on day one</h2>
     <dl>
       <div class="skill"><dt>Separations &amp; MS</dt><dd>HPLC / UPLC, GC-FID/ECD, GC-MS, UPLC-QTOF-MS, UPLC-MS/MS, ion mobility-MS, supercritical fluid chromatography, HILIC, CE-LIF, SPME, flow injection analysis</dd></div>
-      <div class="skill"><dt>Spectroscopy</dt><dd>Raman, FTIR, UV-Vis, LIBS, atomic absorption</dd></div>
+      <div class="skill"><dt>Spectroscopy</dt><dd>Raman, FTIR, UV-Vis, LIBS, atomic absorption spectroscopy (AAS)</dd></div>
       <div class="skill"><dt>Wet chemistry</dt><dd>Redox titrimetry, acid digestion, spectrophotometric determination, standard and calibrant preparation</dd></div>
       <div class="skill"><dt>Methods &amp; quality</dt><dd>Method development and validation, calibration, sample preparation and extraction, quantitative and non-targeted analysis, chemometrics, process monitoring and optimization, SOP authoring, QC documentation</dd></div>
       <div class="skill"><dt>Data &amp; software</dt><dd>Python (data pipelines, image analysis), JMP (design of experiments, statistical modeling), MZmine, MaxQuant, ChemDraw, Multisim, BioRender</dd></div>
@@ -239,11 +255,15 @@ footer{padding:46px 0 60px;border-top:1px solid var(--rule)}
         <h3>Graduate Research Assistant</h3>
         <p class="org">Stockton Laboratory, Georgia Institute of Technology</p>
         <ul>
-          <li>Designed, built, and validated an aqueous-in-gas microfluidic droplet system from concept through commissioning and performance qualification; established stability regimes and characterized flow-rate-dependent size distributions and operating transitions.</li>
+          <li>Developed and validated an aqueous-in-gas microfluidic system for simulating aerosol transport processes relevant to planetary environments.</li>
+          <li>Established droplet generation stability regimes and characterized flow-rate-dependent droplet behavior, size distributions, and operating transitions.</li>
+          <li>Investigate the transport and concentration of simple organic molecules within aerosol microenvironments relevant to chemical evolution.</li>
+          <li>Test amino acid condensation within microfluidic droplets, using glycine under drying conditions and UV exposure.</li>
+          <li>Investigate ribozyme assembly through freeze&ndash;thaw cycling of RNA subunits within microfluidic droplets.</li>
           <li>Developed CE-LIF methods for quantifying fluorescently labeled amino acids, establishing concentration stability, precision, and analyte recovery across droplet formation and collection.</li>
           <li>Built Python data and image-analysis pipelines for high-speed droplet imaging, replacing manual measurement and accelerating design iteration.</li>
-          <li>Conduct spectroscopic and optical characterization of droplet systems; author protocols and diagnose device failures. Funded by Scialog, Research Corporation for Science Advancement.</li>
-          <li>Mentor four undergraduate researchers on instrument development, experimental design, data analysis, and laboratory safety.</li>
+          <li>Conduct spectroscopic and optical characterization of microfluidic droplets for processing atmospheric signatures relevant to exoplanet characterization.</li>
+          <li>Research support: Scialog &mdash; Signatures of Life in the Universe, and Scialog &mdash; Chemical Machinery of the Cell, Research Corporation for Science Advancement.</li>
         </ul>
       </div>
     </div>
@@ -254,8 +274,10 @@ footer{padding:46px 0 60px;border-top:1px solid var(--rule)}
         <h3>Graduate Teaching Assistant, Analytical Instrumentation</h3>
         <p class="org">Georgia Institute of Technology</p>
         <ul>
-          <li>Operate and instruct on GC, GC-MS, LC, Raman, FTIR, UV-Vis, LIBS, and flow injection analysis; trained 100+ students in sample preparation, method development, calibration, and data interpretation.</li>
-          <li>Author and revise standard operating procedures for consistent, traceable laboratory practice; provide real-time instrument and method troubleshooting.</li>
+          <li>Train 100+ undergraduate students in analytical instrumentation, teaching hands-on experiments in chromatographic and spectroscopic techniques &mdash; GC, GC-MS, LC, Raman, FTIR, UV-Vis, LIBS, and flow injection analysis.</li>
+          <li>Guide students in sample preparation, method development, instrument operation, calibration, and data interpretation.</li>
+          <li>Author and revise standard operating procedures, ensuring consistent and traceable laboratory practice.</li>
+          <li>Supervise experiments on dye hydrolysis and methanolysis kinetics and compositional analysis; provide real-time instrument and method troubleshooting.</li>
         </ul>
       </div>
     </div>
@@ -266,8 +288,9 @@ footer{padding:46px 0 60px;border-top:1px solid var(--rule)}
         <h3>Founder &amp; Program Lead, Analytical Instrumentation Training Program</h3>
         <p class="org">Georgia Institute of Technology</p>
         <ul>
-          <li>Designed curriculum and training modules for a departmental program addressing hands-on instrumentation gaps among graduate students.</li>
-          <li>Deliver hands-on training on AAS, GC, GC-MS, LC, Raman, FTIR, and UV-Vis, emphasizing data processing and instrument quality control.</li>
+          <li>Collaborated with faculty and students to design curriculum structure and training modules for a departmental analytical instrumentation program.</li>
+          <li>Provide hands-on training in the operation of AAS, GC, GC-MS, LC, Raman, FTIR, and UV-Vis instrumentation.</li>
+          <li>Organize training sessions emphasizing data processing and quality control of analytical instruments.</li>
         </ul>
       </div>
     </div>
@@ -278,8 +301,11 @@ footer{padding:46px 0 60px;border-top:1px solid var(--rule)}
         <h3>Laboratory Technologist &amp; Research Assistant</h3>
         <p class="org">University of Cape Coast, Ghana</p>
         <ul>
-          <li>Designed and tested custom circuit systems and laboratory instrumentation; implemented preventive maintenance and calibration schedules sustaining instrument uptime and safety.</li>
-          <li>Instructor of record for instrumentation and electronics laboratories, 100+ students per year; supervised undergraduate research in electronics, microbiology, and food science.</li>
+          <li>Instructor of record for analog and digital electronics, instrumentation, and engineering materials laboratories, serving over 100 students per year.</li>
+          <li>Designed and tested circuit systems and laboratory devices for educational and research use.</li>
+          <li>Implemented preventive maintenance and calibration schedules to sustain instrument functionality and safety.</li>
+          <li>Provided hands-on training in method development, instrument design, operation, and data collection for electronics, microbiology, and food science and technology research projects.</li>
+          <li>Supervised undergraduate research projects across electronics, microbiology, and food science and technology.</li>
         </ul>
       </div>
     </div>
@@ -290,9 +316,48 @@ footer{padding:46px 0 60px;border-top:1px solid var(--rule)}
         <h3>Laboratory Assistant (Intern)</h3>
         <p class="org">Ghana Manganese Company Ltd.</p>
         <ul>
-          <li>Determined manganese by redox titrimetry following acid digestion, and boron by spectrophotometry in water and environmental samples; prepared ore samples and standard solutions.</li>
-          <li>Documented analytical results and supported quality control across the assay and environmental laboratories.</li>
+          <li>Prepared ore samples and standard solutions for analysis.</li>
+          <li>Performed manganese determination via redox titrimetry using potassium permanganate, following acid digestion with hydrochloric and nitric acids.</li>
+          <li>Assisted in boron analysis using spectrophotometric methods for water and environmental samples.</li>
+          <li>Documented analytical results, ensured data accuracy, and supported quality control procedures in both the assay and environmental laboratories.</li>
         </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="mentorship">
+  <div class="wrap">
+    <p class="slabel">Mentorship</p>
+    <h2>Undergraduate researchers</h2>
+    <p>I mentor undergraduate researchers in analytical and microfluidic system development &mdash; training them in experimental design, data collection, instrument operation, and laboratory safety, and guiding scientific communication, data interpretation, and research methodology.</p>
+
+    <div class="job">
+      <div class="when">Fall 2025 &mdash;</div>
+      <div>
+        <h3>Kenneth Nguyen</h3>
+        <p class="org">Environmental control chamber development for simulated aerosol microreactors</p>
+      </div>
+    </div>
+    <div class="job">
+      <div class="when">Fall 2025 &mdash;</div>
+      <div>
+        <h3>Isra Hussain</h3>
+        <p class="org">Computational analysis of microfluidic droplet formation dynamics</p>
+      </div>
+    </div>
+    <div class="job">
+      <div class="when">2025 &mdash; 2026</div>
+      <div>
+        <h3>Manas Gangwar</h3>
+        <p class="org">Microfluidic droplet generation and high-speed imaging analysis</p>
+      </div>
+    </div>
+    <div class="job">
+      <div class="when">Fall 2025</div>
+      <div>
+        <h3>Amanda Chesney</h3>
+        <p class="org">Effects of fluid viscosity on microfluidic droplet generation and stability</p>
       </div>
     </div>
   </div>
@@ -329,23 +394,90 @@ footer{padding:46px 0 60px;border-top:1px solid var(--rule)}
 
 <section id="education">
   <div class="wrap">
-    <p class="slabel">Education, awards &amp; service</p>
-    <h2>Background</h2>
+    <p class="slabel">Education</p>
+    <h2>Training</h2>
+    <div class="stack" style="max-width:60em">
+      <p><b>Ph.D., Analytical Chemistry</b> &mdash; Georgia Institute of Technology, expected 2027. Advisor: Prof. Amanda Stockton. Research focus: prebiotic chemical evolution, microfluidic droplet generation, atmospheric chemistry, instrumentation, origins of life.</p>
+      <p><b>Certificate in Technology Innovation</b> (TI:GER Program) &mdash; Scheller College of Business, Georgia Institute of Technology, expected December 2026.</p>
+      <p><b>M.S., Chemistry</b> (non-thesis) &mdash; Georgia Institute of Technology, 2022&ndash;2025.</p>
+      <p><b>B.Sc., Laboratory Technology</b> &mdash; University of Cape Coast, Ghana, 2012&ndash;2016. Undergraduate research: designed and built an RF mobile-phone signal detector for restricted cellphone environments.</p>
+    </div>
+  </div>
+</section>
+
+<section id="talks">
+  <div class="wrap">
+    <p class="slabel">Conferences, workshops &amp; talks</p>
+    <h2>Presented work</h2>
+
+    <div class="job">
+      <div class="when">2026</div>
+      <div>
+        <h3>ExxonMobil&ndash;PALS Georgia Tech Program</h3>
+        <p class="org">Houston, TX &mdash; School of Chemistry and Biochemistry representative, two-day workshop</p>
+      </div>
+    </div>
+    <div class="job">
+      <div class="when">2026</div>
+      <div>
+        <h3>ACS Spring 2026 &mdash; poster</h3>
+        <p class="org">Atlanta, GA &mdash; <i>Liquid&ndash;liquid to liquid&ndash;gas: expanding the design space of microfluidic droplet generation</i></p>
+      </div>
+    </div>
+    <div class="job">
+      <div class="when">2025</div>
+      <div>
+        <h3>ASME Fluids Engineering Division Summer Meeting &mdash; oral</h3>
+        <p class="org">Philadelphia, PA &mdash; <i>Development of a sea-spray microfluidic droplet system for chemical evolution studies</i></p>
+      </div>
+    </div>
+    <div class="job">
+      <div class="when">2025</div>
+      <div>
+        <h3>AbGradCon 2025 &mdash; poster</h3>
+        <p class="org">Boulder, CO &mdash; <i>Sea spray aerosol microfluidics: simulating prebiotic atmospheric chemistry</i></p>
+      </div>
+    </div>
+    <div class="job">
+      <div class="when">2025</div>
+      <div>
+        <h3>Pittcon 2025 &mdash; poster</h3>
+        <p class="org">Boston, MA &mdash; <i>Design, assembly, and application of a sea spray aerosol microfluidic droplet generator for experimental atmospheric simulations</i></p>
+      </div>
+    </div>
+    <div class="job">
+      <div class="when">2025</div>
+      <div>
+        <h3>Panelist &mdash; Collaboration Over Competition: Strengthening Leadership Networks</h3>
+        <p class="org">Center for Student Engagement, Georgia Institute of Technology, August 2025. Contributed to a university-wide leadership forum on collaborative innovation and peer empowerment, sharing strategies for interdisciplinary teamwork and mentoring across communities.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="awards">
+  <div class="wrap">
+    <p class="slabel">Awards, service &amp; affiliations</p>
+    <h2>Recognition and roles</h2>
     <div class="grid2">
       <div class="stack">
-        <p><strong>Education</strong></p>
-        <p><b>Ph.D., Analytical Chemistry</b> — Georgia Institute of Technology, expected 2027. Advisor: Prof. Amanda Stockton.</p>
-        <p><b>Certificate in Technology Innovation</b> (TI:GER) — Scheller College of Business, Georgia Tech, expected Dec 2026.</p>
-        <p><b>M.S., Chemistry</b> — Georgia Institute of Technology, 2025.</p>
-        <p><b>B.Sc., Laboratory Technology</b> — University of Cape Coast, Ghana, 2016.</p>
+        <p><strong>Awards &amp; recognition</strong></p>
+        <p><b>Conference Travel Grant</b> &mdash; Georgia Tech College of Sciences Graduate Career Connect Travel Grant (2026), toward transportation, lodging, registration, and per diem.</p>
+        <p><b>AbGradCon Conference Award</b> (2025) &mdash; conference funding for travel, lodging, meals, and per diem.</p>
+        <p><b>White &amp; Gold Student Leadership Award</b> (2024) &mdash; Georgia Tech Center for Student Engagement, for founding the Georgia Tech Ghanaian Students Association.</p>
+        <p><b>Graduate Teaching Assistantship</b> (2022&ndash;present) &mdash; full funding for doctoral studies, awarded through competitive selection.</p>
+        <p style="margin-top:20px"><strong>Professional memberships</strong></p>
+        <p>American Chemical Society (ACS) &middot; Association of Official Analytical Collaboration (AOAC International) &middot; Society for Laboratory Automation and Screening (SLAS) &middot; Society of Environmental Toxicology and Chemistry (SETAC).</p>
       </div>
       <div class="stack">
-        <p><strong>Awards</strong></p>
-        <p>White &amp; Gold Student Leadership Award, Georgia Tech (2024) · AbGradCon Conference Award (2025) · College of Sciences Travel Grant (2026) · Graduate Teaching Assistantship, competitive full doctoral funding (2022–present).</p>
-        <p><strong>Conferences</strong></p>
-        <p>Pittcon 2025 · ACS Spring 2026 · ASME Fluids Engineering Division Summer Meeting 2025 (oral) · AbGradCon 2025 · ExxonMobil-PALS 2026.</p>
-        <p><strong>Memberships</strong></p>
-        <p>American Chemical Society · AOAC International · Society for Laboratory Automation and Screening · Society of Environmental Toxicology and Chemistry.</p>
+        <p><strong>Leadership &amp; service</strong></p>
+        <p><b>Graduate Student Representative</b>, Undergraduate &amp; Graduate Academic Programs Committee (UGAP), Georgia Tech (2025&ndash;present).</p>
+        <p><b>President</b>, African Graduate Students Connect, Georgia Tech (2025&ndash;present).</p>
+        <p><b>President</b>, Ghanaian Students Association, Georgia Tech (2023&ndash;2025).</p>
+        <p><b>Vice President</b>, Black Graduate Students Association, Georgia Tech (2023&ndash;2024).</p>
+        <p><b>Graduate Senator</b>, Graduate Student Government Association, Georgia Tech (2023&ndash;2024).</p>
+        <p><b>Vice President</b>, University Laboratory Technologists Association, University of Cape Coast, Ghana (2019&ndash;present).</p>
+        <p><b>President</b>, Laboratory Technology Students Association, University of Cape Coast, Ghana (2014&ndash;2015).</p>
       </div>
     </div>
   </div>
@@ -361,7 +493,8 @@ footer{padding:46px 0 60px;border-top:1px solid var(--rule)}
       <a href="tel:+14708381668">(470) 838-1668</a>
       <a href="https://www.linkedin.com/in/aad27/">LinkedIn</a>
       <a href="https://scholar.google.com/citations?user=gUtnRHEAAAAJ&amp;hl=en">Google Scholar</a>
-      <a href="resume.pdf" download>Résumé (PDF)</a>
+      <a href="cv.pdf" download>Full CV</a>
+      <a href="resume.pdf" download>One-page résumé</a>
     </div>
     <p class="fine">Last updated August 2026</p>
   </div>

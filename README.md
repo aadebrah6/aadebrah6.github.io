@@ -1,9 +1,9 @@
-# augustinedebrah.github.io
+# aadebrah6.github.io
 
 Personal website and digital CV for Augustine Atta Debrah — analytical chemist,
 Ph.D. candidate at the Georgia Institute of Technology.
 
-**Live site:** https://augustinedebrah.github.io
+**Live site:** https://aadebrah6.github.io
 
 ---
 
